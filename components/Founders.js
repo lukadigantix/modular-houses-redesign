@@ -2,7 +2,6 @@
 
 import { useRef } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
@@ -133,12 +132,15 @@ function FounderSection({ founder, reverse, image }) {
         {/* PORTRAIT - height-capped on desktop so it fits in 100vh */}
         <div className={reverse ? "md:order-1" : ""}>
           <div className="fimg relative aspect-[3/4] w-full overflow-hidden rounded-[4px] bg-brown-deep md:mx-auto md:h-[78vh] md:w-auto">
-            <Image
+            {/* plain <img> (not next/image) to bypass Vercel image
+                optimization. Absolutely fills the relative parent, mirroring
+                the previous `fill` behaviour. */}
+            <img
               src={image}
               alt={founder.name}
-              fill
-              sizes="(min-width: 768px) 40vw, 100vw"
-              className="object-cover object-center"
+              loading="lazy"
+              className="absolute inset-0 h-full w-full object-cover object-center"
+              style={{ objectFit: "cover" }}
             />
             {/* legibility gradient for the caption */}
             <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />

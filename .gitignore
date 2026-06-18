@@ -10,3 +10,4 @@ node_modules/
 .next/
 .env*.local
 moyra-analysis/node_modules/
+moyra-analysis/
