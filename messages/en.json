@@ -299,7 +299,7 @@
   },
   "configurator": {
     "back": "Back",
-    "cta": "Contact us →",
+    "cta": "Contact us",
     "active": "active",
     "baseLabel": "Construction (base)",
     "noOptions": "Loading options..."
@@ -319,7 +319,7 @@
   "footer": {
     "getInTouch": "Get in touch",
     "email": "info@modularhouses.rs",
-    "reserve": "Reserve your House® ↗",
+    "reserve": "Reserve your House®",
     "wordmark": "Modular",
     "copyright": "© {year} Modular Houses® - All rights reserved",
     "tagline": "Closer to Nature-Closer to Yourself"

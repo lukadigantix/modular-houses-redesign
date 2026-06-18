@@ -1,9 +1,10 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useRef, useState } from "react";
 import Link from "next/link";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
 import { useTranslations } from "next-intl";
 import { withReg } from "@/components/Registered";
 
@@ -16,58 +17,79 @@ const SOCIAL = [
 export default function Footer() {
   const root = useRef(null);
   const logoWrap = useRef(null);
+  const revealed = useRef(false);
+  const [failed, setFailed] = useState(false);
   const t = useTranslations("footer");
 
-  // Replicates the capsules.moyra.co footer wordmark reveal exactly: inline the
-  // SVG, then each letter path wipes + slides in (clip-path + x), staggered,
-  // when the footer scrolls into view.
-  useEffect(() => {
-    let ctx;
-    let cancelled = false;
+  // Reveal the whole wordmark with a left->right clip wipe + fade. The logo is
+  // a plain <img> (most consistent cross-browser rendering), so we animate the
+  // wrapper rather than individual letter paths. Idempotent so multiple
+  // triggers (ScrollTrigger, in-view check, img onLoad) can't double-run it.
+  const reveal = () => {
+    if (revealed.current || !logoWrap.current) return;
+    revealed.current = true;
+    gsap.to(logoWrap.current, {
+      clipPath: "inset(0% 0% 0% 0%)",
+      y: 0,
+      autoAlpha: 1,
+      duration: 1.1,
+      ease: "power3.out",
+      force3D: true,
+    });
+  };
 
-    fetch("/Modular-Logo-White.svg")
-      .then((r) => r.text())
-      .then((svg) => {
-        if (cancelled || !logoWrap.current) return;
-        logoWrap.current.innerHTML = svg;
-        const paths = logoWrap.current.querySelectorAll("path");
-        if (!paths.length) return;
+  const inView = () => {
+    const el = logoWrap.current;
+    if (!el) return false;
+    const r = el.getBoundingClientRect();
+    return r.top < window.innerHeight && r.bottom > 0;
+  };
 
-        ctx = gsap.context(() => {
-          // slide distance = widest letter's width (exact bundle logic)
-          let c = 0;
-          paths.forEach((p) => {
-            const w = p.getBBox().width;
-            if (w > c) c = w;
-          });
+  // When the SVG finishes loading its real height may shift the layout; recalc
+  // ScrollTrigger, and reveal immediately if it's already on screen.
+  const onImgLoad = () => {
+    ScrollTrigger.refresh();
+    if (inView()) reveal();
+  };
 
-          // EXACT capsules.moyra.co footer wordmark config:
-          gsap.set(paths, { clipPath: "inset(0% 0% 0% 100%)", x: c });
-          gsap
-            .timeline({
-              scrollTrigger: {
-                trigger: root.current,
-                start: "80% 80%",
-                end: "bottom 80%",
-                toggleActions: "play none none reverse",
-              },
-            })
-            .to(paths, {
-              clipPath: "inset(0% 0% 0% 0%)",
-              x: 0,
-              stagger: 0.01,
-              duration: 0.9,
-              ease: "power3.inOut",
-            });
-        }, logoWrap);
-      })
-      .catch(() => {});
+  useGSAP(
+    () => {
+      const el = logoWrap.current;
+      if (!el) return;
 
-    return () => {
-      cancelled = true;
-      if (ctx) ctx.revert();
-    };
-  }, []);
+      // hidden start state (set from JS so a JS failure leaves the logo VISIBLE)
+      gsap.set(el, {
+        clipPath: "inset(0% 100% 0% 0%)",
+        y: 40,
+        autoAlpha: 0,
+        force3D: true,
+      });
+
+      const st = ScrollTrigger.create({
+        trigger: el,
+        start: "top 88%",
+        once: true,
+        onEnter: reveal,
+      });
+
+      // Fallback for browsers that evaluate ScrollTrigger differently, or when
+      // the user loads/refreshes already scrolled to the footer.
+      if (inView()) reveal();
+
+      // Some browsers size the SVG late; recalc trigger positions once layout
+      // has settled.
+      const refreshTimer = setTimeout(() => {
+        ScrollTrigger.refresh();
+        if (inView()) reveal();
+      }, 500);
+
+      return () => {
+        clearTimeout(refreshTimer);
+        st.kill();
+      };
+    },
+    { scope: root }
+  );
 
   return (
     <footer
@@ -109,24 +131,38 @@ export default function Footer() {
           </nav>
         </div>
 
-        {/* DESKTOP (≥768px): inline SVG wordmark - filled + animated per-path on
-            scroll. overflow-hidden contains the off-screen letters before they
-            slide in. */}
+        {/* Wordmark logo (all breakpoints). A plain <img> renders the SVG
+            consistently across browsers; we animate the wrapper, not the SVG
+            internals. The outer div is forced onto its own GPU layer
+            (translateZ + will-change) so the reveal composites smoothly
+            everywhere. */}
         <div
-          ref={logoWrap}
-          className="footer-logo mt-20 hidden overflow-hidden md:block"
-          role="img"
-          aria-label="Modular Houses"
-        />
-
-        {/* MOBILE (<768px): static logo, no GSAP/ScrollTrigger - the per-path
-            scroll animation is unreliable on mobile, so render it plainly. */}
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          src="/Modular-Logo-White.svg"
-          alt="Modular Houses"
-          className="footer-logo-static mt-20 block w-full md:hidden"
-        />
+          className="footer-logo mt-20"
+          style={{ willChange: "transform", transform: "translateZ(0)" }}
+        >
+          <div
+            ref={logoWrap}
+            className="overflow-hidden"
+            role="img"
+            aria-label="Modular Houses"
+          >
+            {failed ? (
+              // Fallback if the SVG fails to load: large cream Host Grotesk text.
+              <span className="wordmark block w-full text-[13vw] leading-none text-cream">
+                Modular Houses
+              </span>
+            ) : (
+              /* eslint-disable-next-line @next/next/no-img-element */
+              <img
+                src="/Modular-Logo-White.svg"
+                alt="Modular Houses"
+                style={{ width: "100%", display: "block" }}
+                onLoad={onImgLoad}
+                onError={() => setFailed(true)}
+              />
+            )}
+          </div>
+        </div>
 
         <div className="mt-10 flex flex-col gap-2 border-t border-cream/15 pt-6 text-sm text-cream/50 md:flex-row md:justify-between">
           <span>{withReg(t("copyright", { year: String(new Date().getFullYear()) }))}</span>

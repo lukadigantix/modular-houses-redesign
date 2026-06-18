@@ -55,7 +55,11 @@ export default function HorizontalDetails() {
   return (
     <section
       ref={root}
-      className="relative h-[100svh] overflow-hidden bg-ink text-cream"
+      // Use the LARGE viewport height (lvh): while this section is pinned
+      // (position:fixed), iOS hiding the URL bar grows the viewport - a 100svh
+      // section would expose a cream strip of <body> below it. 100lvh always
+      // covers. On desktop lvh == svh == vh, so the layout is unchanged there.
+      className="relative h-[100lvh] overflow-hidden bg-ink text-cream"
     >
       <div
         ref={track}

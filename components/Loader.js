@@ -33,7 +33,8 @@ export default function Loader() {
       htmlEl.style.overflow = "hidden";
 
       // ---- initial states ----
-      gsap.set(".pre-loader", { width: "0%" });
+      // GPU-composited fill (scaleX from the left) rather than animating width.
+      gsap.set(".pre-loader", { scaleX: 0, transformOrigin: "left center" });
       gsap.set(".pre-char", { clipPath: "inset(0% 100% 0% 0%)", x: 28 });
       gsap.set(".pre-caption", { autoAlpha: 0, y: 12 });
 
@@ -62,10 +63,10 @@ export default function Loader() {
           { clipPath: "inset(0% 0% 0% 0%)", x: 0, stagger: 0.01, duration: 0.6, ease: "power1.inOut" },
           "logo"
         )
-        // cream loader bar grows in width - page "revealed" at 50%
-        .to(".pre-loader", { width: "50%", duration: 1, ease: "power1.inOut" }, "logo")
-        .to(".pre-loader", { width: "60%", duration: 1, ease: "power2.inOut" })
-        .to(".pre-loader", { width: "100%", duration: 0.6, ease: "power2.inOut" })
+        // cream loader bar grows (scaleX) - page "revealed" at 50%
+        .to(".pre-loader", { scaleX: 0.5, duration: 1, ease: "power1.inOut" }, "logo")
+        .to(".pre-loader", { scaleX: 0.6, duration: 1, ease: "power2.inOut" })
+        .to(".pre-loader", { scaleX: 1, duration: 0.6, ease: "power2.inOut" })
         .addLabel("dissapear")
         // logo letters wipe out
         .to(
@@ -94,7 +95,7 @@ export default function Loader() {
       <div className="loader-overlay fixed left-0 top-0 z-[9999] grid h-full w-full place-items-center overflow-hidden bg-ink">
         {/* dark pill containing the cream loader bar + wordmark */}
         <div className="pre-capsule relative grid h-[23vh] w-[82vw] max-w-[680px] place-items-center overflow-hidden rounded-[9999px] bg-brown-dark opacity-0">
-          <div className="pre-loader absolute inset-y-0 left-0 bg-cream" />
+          <div className="pre-loader absolute inset-y-0 left-0 w-full origin-left bg-cream" />
           <div className="pre-logo relative z-10 flex items-end text-3xl text-cream mix-blend-exclusion md:text-5xl">
             {[...WORD].map((c, i) => (
               <span key={i} className="pre-char inline-block whitespace-pre">

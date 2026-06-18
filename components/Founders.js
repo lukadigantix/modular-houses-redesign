@@ -436,13 +436,13 @@ export default function Founders() {
             href="/large-modul"
             className="rounded-full bg-cream px-7 py-4 text-ink transition hover:opacity-90"
           >
-            {t("ctaModules")} →
+            {t("ctaModules")}
           </Link>
           <a
             href={`mailto:${CONTACT_EMAIL}`}
             className="rounded-full border border-cream/40 px-7 py-4 text-cream transition hover:bg-cream hover:text-ink"
           >
-            {t("ctaWrite")} →
+            {t("ctaWrite")}
           </a>
         </div>
       </section>

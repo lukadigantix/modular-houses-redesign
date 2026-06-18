@@ -8,6 +8,13 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
+// Safari/iOS: ignore the viewport resize that fires when the URL bar shows or
+// hides. Without this, ScrollTrigger re-measures mid-scroll and leaves a gap
+// below pinned sections (the cream body shows through). This is the Lenis-safe
+// fix for that bounce/gap behaviour - unlike ScrollTrigger.normalizeScroll(),
+// which hijacks scrolling itself and conflicts with Lenis.
+ScrollTrigger.config({ ignoreMobileResize: true });
+
 /**
  * Lenis smooth scroll wired into GSAP's ScrollTrigger: Lenis drives the RAF
  * loop, GSAP's ticker advances Lenis, and every Lenis scroll event calls
@@ -24,6 +31,10 @@ export default function SmoothScroll({ children }) {
       orientation: "vertical",
       gestureOrientation: "vertical",
       smoothWheel: true,
+      // iOS/Safari: keep touch scrolling NATIVE (don't let Lenis sync/smooth
+      // touch). Smoothing touch conflicts with Safari's momentum + the pinned
+      // ScrollTrigger sections. (syncTouch is the modern name for smoothTouch.)
+      syncTouch: false,
       wheelMultiplier: 1,
       touchMultiplier: 2,
     });

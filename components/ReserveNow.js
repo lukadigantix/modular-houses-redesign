@@ -99,7 +99,7 @@ export default function ReserveNow() {
           href="/kontakt"
           className="absolute left-1/2 top-[58%] z-10 -translate-x-1/2 rounded-full bg-cream px-6 py-3 text-sm text-ink transition hover:scale-105 md:top-[60%]"
         >
-          {t("cta")} ↗
+          {t("cta")}
         </Link>
       </div>
     </div>

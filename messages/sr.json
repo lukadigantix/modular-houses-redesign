@@ -299,7 +299,7 @@
   },
   "configurator": {
     "back": "Nazad",
-    "cta": "Kontaktirajte nas →",
+    "cta": "Kontaktirajte nas",
     "active": "aktivno",
     "baseLabel": "Konstrukcija (osnova)",
     "noOptions": "Učitavanje opcija..."
@@ -319,7 +319,7 @@
   "footer": {
     "getInTouch": "Stupite u kontakt",
     "email": "info@modularhouses.rs",
-    "reserve": "Rezervišite svoju kuću® ↗",
+    "reserve": "Rezervišite svoju kuću®",
     "wordmark": "Modular",
     "copyright": "© {year} Modular Houses® - Sva prava zadržana",
     "tagline": "Bliže prirodi-Bliže sebi"

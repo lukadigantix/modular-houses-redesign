@@ -274,7 +274,7 @@ export default function Contact() {
                 disabled={status === "loading"}
                 className="form-submit mt-2 w-full rounded-full bg-brown-dark px-7 py-4 text-cream transition hover:bg-cream hover:text-ink disabled:cursor-not-allowed disabled:opacity-60 disabled:hover:bg-brown-dark disabled:hover:text-cream"
               >
-                {status === "loading" ? t("form.submitting") : `${t("form.submit")} →`}
+                {status === "loading" ? t("form.submitting") : t("form.submit")}
               </button>
 
               {status === "error" ? (

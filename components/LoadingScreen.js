@@ -27,16 +27,18 @@ export default function LoadingScreen() {
       shown.current = true;
       gsap.killTweensOf([ov, b]);
       gsap.set(ov, { yPercent: 0, autoAlpha: 1, pointerEvents: "auto" });
-      gsap.set(b, { width: "0%" });
+      // GPU-composited fill (scaleX from the left) instead of animating width,
+      // which avoids layout/paint each frame on Safari.
+      gsap.set(b, { scaleX: 0, transformOrigin: "left center" });
       // indeterminate fill toward 85% and hold (we don't know the exact time)
-      gsap.to(b, { width: "85%", duration: 1.6, ease: "power1.out" });
+      gsap.to(b, { scaleX: 0.85, duration: 1.6, ease: "power1.out" });
     } else if (shown.current) {
       // dismiss: finish the bar, then slide the overlay up
       shown.current = false;
       gsap.killTweensOf(b);
       gsap
         .timeline()
-        .to(b, { width: "100%", duration: 0.3, ease: "power2.inOut" })
+        .to(b, { scaleX: 1, duration: 0.3, ease: "power2.inOut" })
         .to(ov, { yPercent: -100, duration: 0.6, ease: "power2.inOut" }, "+=0.05")
         .set(ov, { autoAlpha: 0, pointerEvents: "none" });
     }
@@ -49,7 +51,7 @@ export default function LoadingScreen() {
       className="invisible fixed inset-0 z-[100] grid place-items-center overflow-hidden bg-ink opacity-0"
     >
       <div className="relative grid h-[23vh] w-[82vw] max-w-[680px] place-items-center overflow-hidden rounded-[9999px] bg-brown-dark">
-        <div ref={bar} className="absolute inset-y-0 left-0 w-0 bg-cream" />
+        <div ref={bar} className="absolute inset-y-0 left-0 w-full origin-left bg-cream" />
         <div className="relative z-10 flex items-end text-3xl text-cream mix-blend-exclusion md:text-5xl">
           {[...WORD].map((c, i) => (
             <span key={i} className="inline-block whitespace-pre">

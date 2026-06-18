@@ -43,6 +43,12 @@ html.lenis body {
   overscroll-behavior: contain;
 }
 
+/* Inner scrollable panels (e.g. the configurator) get native iOS momentum
+   scrolling. Harmless on modern browsers; required on older iOS Safari. */
+[data-lenis-prevent] {
+  -webkit-overflow-scrolling: touch;
+}
+
 .lenis.lenis-stopped {
   overflow: hidden;
 }
