@@ -1,0 +1,12 @@
+/node_modules
+/.next
+/out
+/build
+.DS_Store
+*.pem
+.env*.local
+next-env.d.ts
+node_modules/
+.next/
+.env*.local
+moyra-analysis/node_modules/

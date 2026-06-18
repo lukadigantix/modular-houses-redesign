@@ -1,0 +1,330 @@
+{
+  "brand": "Modular Houses",
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "modul": "Module",
+    "contact": "Contact"
+  },
+  "hero": {
+    "tagline": [
+      "Architecture",
+      "of the Future-Freedom",
+      "of the Present"
+    ],
+    "paragraph": [
+      "Custom modular houses.",
+      "Building without foundations."
+    ],
+    "preloaderCaption": "Meet Modular Houses® - modern, cozy and customizable homes.",
+    "imageAlt": "Modular house in nature",
+    "ipNotice": "© Modular Houses® - Protected design and concept. All rights reserved."
+  },
+  "intro": {
+    "label": "(Intro)",
+    "copy": "Welcome to the world of custom modular houses, where we blend modern architecture with nature. Our homes are built without foundations - quickly and precisely - and placed in some of the most beautiful locations. A place where you can be with yourself and your loved ones.",
+    "metaLeft": "A place to experience unforgettable moments in nature.",
+    "metaRight": "Est. Serbia"
+  },
+  "products": {
+    "discoverLabel": "Module",
+    "configure": "Configure",
+    "heading": "Choose the one you like best",
+    "intro": "You can choose one of our premium modular models. Each provides the highest quality and meets the standards adjusted to your needs.",
+    "detailsAria": "{name} details",
+    "detailsTitle": "Details",
+    "requestQuote": "Request a quote?",
+    "closeAria": "Close details",
+    "specLabels": [
+      "Square footage",
+      "Bedroom",
+      "Air conditioning",
+      "Terrace",
+      "Jacuzzi"
+    ],
+    "items": [
+      {
+        "name": "Atrijum Koncept®",
+        "desc": "Atrijum Koncept® boasts refined aesthetics and a modern interior, creating an intimate retreat in the heart of nature.",
+        "specs": [
+          "45m²",
+          "King Size",
+          "Available",
+          "Available",
+          "None"
+        ]
+      },
+      {
+        "name": "Glamping Koncept®",
+        "desc": "The most prestigious model - the biggest terrace and jacuzzi with an amazing view of the surroundings.",
+        "specs": [
+          "38m²",
+          "King Size",
+          "Available",
+          "Available",
+          "Available"
+        ]
+      },
+      {
+        "name": "Kamp Koncept®",
+        "desc": "With its striking architecture and upscale amenities, Kamp Koncept® offers an exclusive retreat in the heart of the landscape.",
+        "specs": [
+          "28m²",
+          "Double",
+          "Available",
+          "Available",
+          "None"
+        ]
+      },
+      {
+        "name": "Wellness®",
+        "desc": "Wellness® nestles into a wooded retreat with floor-to-ceiling glass and a warm timber interior, steps from the trees.",
+        "specs": [
+          "52m²",
+          "King Size",
+          "Available",
+          "Available",
+          "Available"
+        ]
+      }
+    ]
+  },
+  "moduli": {
+    "tagline": "Architecture of the future - tailored to you",
+    "heading": "Choose a module",
+    "subtitle": "Start with a base model",
+    "cta": "Configure this module",
+    "featuresLine": "All modules · Energy efficient · ISO certified · 48h assembly",
+    "scroll": "Scroll",
+    "points": [
+      {
+        "title": "Fast assembly",
+        "desc": "Installed on site in just a few days."
+      },
+      {
+        "title": "Adaptable design",
+        "desc": "Configure the layout, cladding and details."
+      },
+      {
+        "title": "Long-term value",
+        "desc": "Durable materials and low maintenance costs."
+      }
+    ],
+    "specs": {
+      "width": "Wide",
+      "length": "Long",
+      "height": "High",
+      "floors": "Floor"
+    },
+    "descriptions": {
+      "large-modul": "A spacious module for family living, with high ceilings and full daylight. Ideal as a permanent home in nature.",
+      "small-modul": "A compact, efficient space - perfect as a weekend retreat or a studio surrounded by greenery.",
+      "small-modul-v2": "An optimized take on the small module, with a smarter layout and a more accessible price point."
+    }
+  },
+  "features": {
+    "heading": "All Modular Houses® homes-are built based on the same rules:",
+    "pillars": [
+      "Sustainable",
+      "Nature-Care",
+      "Smart Privacy",
+      "Spacious",
+      "Glassed-in"
+    ]
+  },
+  "details": {
+    "items": [
+      {
+        "title": [
+          "Green silence",
+          "a module that disappears into the forest"
+        ],
+        "badge": "Forest",
+        "desc": [
+          "A home that blends into the canopy,",
+          "quiet and almost unseen among the trees."
+        ]
+      },
+      {
+        "title": [
+          "Nature as the interior",
+          "when the boundary disappears"
+        ],
+        "badge": "Nature",
+        "desc": [
+          "Floor-to-ceiling glass erases the line",
+          "between the outside and the inside."
+        ]
+      },
+      {
+        "title": [
+          "Minimalism in the heart of nature",
+          "less is more"
+        ],
+        "badge": "Minimal",
+        "desc": [
+          "Everything you need, nothing excess -",
+          "a space distilled to its essence."
+        ]
+      }
+    ]
+  },
+  "reviews": {
+    "label": "Do people like us?",
+    "prevAria": "Previous review",
+    "nextAria": "Next review",
+    "items": [
+      {
+        "quote": "Staying at Modular Houses redefined my retreat - modern design meets nature, and every sunset feels like a serene masterpiece.",
+        "name": "Marcus Simpson",
+        "location": "(New York)"
+      },
+      {
+        "quote": "Modular Houses offered the perfect escape - sleek, modern spaces surrounded by natural stillness. Each moment felt peaceful, grounded, and truly unique.",
+        "name": "Lena Morrison",
+        "location": "(Los Angeles)"
+      },
+      {
+        "quote": "Modular Houses was the perfect hideaway - stylish, peaceful, and fully surrounded by stunning views day and night.",
+        "name": "Jason Whitaker",
+        "location": "(San Francisco)"
+      }
+    ]
+  },
+  "reserveSection": {
+    "wordmark": "Modular Houses",
+    "heading": [
+      "Closer to Nature-",
+      "Closer to Yourself"
+    ],
+    "subheading": [
+      "Spend unforgettable and remarkable time",
+      "in nature with - Modular Houses."
+    ],
+    "cta": "Reserve Now",
+    "imageAlt": "Modular house in nature"
+  },
+  "about": {
+    "label": "About",
+    "headline": "Two people. One vision. Modular Houses.",
+    "founders": [
+      {
+        "name": "Milan Vlajić",
+        "role": "m.ing.arch. · CEO & Founder",
+        "email": "milan@modularhouses.rs",
+        "quote": "As the founder of Modular Houses, I have devoted my career to developing and advancing modular construction. I am the originator of the Modular Houses project, with a vision to offer high-quality, modern and functional living solutions that meet the needs of contemporary life. Through a commitment to innovation, build quality and client satisfaction, my goal is for modular construction to become recognized as a reliable, efficient and lasting way of living. I believe that every successful project begins with a good idea and ends with the trust we build with our clients."
+      },
+      {
+        "name": "Miloš Simić",
+        "role": "Head of Sales & Marketing",
+        "email": "milos@modularhouses.rs",
+        "quote": "For years I have been dedicated to developing sales, marketing and client communication in the field of modular construction. As Head of Sales & Marketing at Modular Houses, my focus is on connecting innovative living solutions with people looking for a quality, functional and modern space to live in. I believe trust is the foundation of every successful project, which is why I strive to give every client clear information, expert support and certainty throughout the entire process - from the first idea to moving in."
+      }
+    ],
+    "manifesto": "Modular Houses isn't just a company - it's a way of thinking about space, life and the future.",
+    "ctaModules": "View modules",
+    "ctaWrite": "Write to us",
+    "valuesLabel": "(Values)",
+    "values": [
+      {
+        "title": "Quality",
+        "desc": "Every detail matters."
+      },
+      {
+        "title": "Transparency",
+        "desc": "Clear communication from idea to move-in."
+      },
+      {
+        "title": "Innovation",
+        "desc": "Modular construction as an answer to the future."
+      }
+    ],
+    "processLabel": "(Process)",
+    "process": [
+      {
+        "tag": "Start",
+        "title": "Consultation",
+        "desc": "A conversation about your needs, wishes and budget - the foundation of every good project."
+      },
+      {
+        "tag": "Concept",
+        "title": "Design",
+        "desc": "Concept design and technical documentation tailored to your space and the way you live."
+      },
+      {
+        "tag": "Build",
+        "title": "Production",
+        "desc": "Modules built in controlled factory conditions, with precision and quality control."
+      },
+      {
+        "tag": "Delivery",
+        "title": "Transport",
+        "desc": "Delivery of the finished modules to your location - safely and right on time."
+      },
+      {
+        "tag": "End",
+        "title": "Assembly",
+        "desc": "On-site assembly and handover of the keys within just a few days."
+      }
+    ],
+    "contact": {
+      "headline": "Have a project in mind?",
+      "subtitle": "Let's talk about your next home."
+    }
+  },
+  "kontakt": {
+    "label": "Contact",
+    "headline": "Let's start a conversation.",
+    "infoLabel": "(Contact)",
+    "emailLabel": "Email",
+    "email": "info@modularhouses.rs",
+    "phoneLabel": "Phone",
+    "phone": "+381 65 444 4545",
+    "instagramLabel": "Instagram",
+    "instagram": "@modularhouses_rs",
+    "instagramHref": "https://www.instagram.com/modularhouses_rs/",
+    "locationLabel": "Location",
+    "location": "Svilajnac, Serbia",
+    "form": {
+      "name": "Full name",
+      "email": "Email",
+      "phone": "Phone (optional)",
+      "message": "Message",
+      "submit": "Send message",
+      "submitting": "Sending...",
+      "successTitle": "Your message has been sent!",
+      "successText": "We'll get back to you as soon as possible.",
+      "error": "Something went wrong. Please try again or contact us directly at info@modularhouses.rs"
+    }
+  },
+  "configurator": {
+    "back": "Back",
+    "cta": "Contact us →",
+    "active": "active",
+    "baseLabel": "Construction (base)",
+    "noOptions": "Loading options..."
+  },
+  "menu": {
+    "button": "Menu",
+    "openAria": "Open menu",
+    "closeAria": "Close menu",
+    "links": [
+      "Home",
+      "About",
+      "Module",
+      "Contact"
+    ],
+    "email": "info@modularhouses.rs"
+  },
+  "footer": {
+    "getInTouch": "Get in touch",
+    "email": "info@modularhouses.rs",
+    "reserve": "Reserve your House® ↗",
+    "wordmark": "Modular",
+    "copyright": "© {year} Modular Houses® - All rights reserved",
+    "tagline": "Closer to Nature-Closer to Yourself"
+  },
+  "language": {
+    "label": "Change language"
+  }
+}

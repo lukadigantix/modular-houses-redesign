@@ -1,0 +1,330 @@
+{
+  "brand": "Modular Houses",
+  "nav": {
+    "home": "Početna",
+    "about": "O nama",
+    "modul": "Modul",
+    "contact": "Kontakt"
+  },
+  "hero": {
+    "tagline": [
+      "Arhitektura",
+      "Budućnosti-Sloboda",
+      "Sadašnjosti"
+    ],
+    "paragraph": [
+      "Modularne kuće po meri.",
+      "Gradnja bez temelja."
+    ],
+    "preloaderCaption": "Upoznajte Modular Houses® - moderne i udobne kuće, sklopive i po meri.",
+    "imageAlt": "Modularna kuća u prirodi",
+    "ipNotice": "© Modular Houses® - Zaštićen dizajn i koncept. Sva prava zadržana."
+  },
+  "intro": {
+    "label": "(Uvod)",
+    "copy": "Dobrodošli u svet modularnih kuća po meri, gde spajamo savremenu arhitekturu sa prirodom. Naše kuće grade se bez temelja, brzo i precizno, i smeštaju se na neke od najlepših lokacija. Prostor u kojem možete biti sa sobom i svojim najmilijima.",
+    "metaLeft": "Mesto za nezaboravne trenutke u prirodi.",
+    "metaRight": "Osnovano - Srbija"
+  },
+  "products": {
+    "discoverLabel": "Modul",
+    "configure": "Konfiguriši",
+    "heading": "Izaberite onu koja vam se najviše sviđa",
+    "intro": "Možete izabrati jedan od naših premijum modularnih modela. Svaki pruža najviši kvalitet i ispunjava standarde prilagođene vašim potrebama.",
+    "detailsAria": "{name} detalji",
+    "detailsTitle": "Detalji",
+    "requestQuote": "Zatraži ponudu?",
+    "closeAria": "Zatvori detalje",
+    "specLabels": [
+      "Kvadratura",
+      "Spavaća soba",
+      "Klima",
+      "Terasa",
+      "Jacuzzi"
+    ],
+    "items": [
+      {
+        "name": "Atrijum Koncept®",
+        "desc": "Atrijum Koncept® odlikuje se prefinjenom estetikom i modernim enterijerom, stvarajući intiman dom u srcu prirode.",
+        "specs": [
+          "45m²",
+          "King Size",
+          "Dostupno",
+          "Dostupno",
+          "Nema"
+        ]
+      },
+      {
+        "name": "Glamping Koncept®",
+        "desc": "Najprestižniji model - najveća terasa i đakuzi sa fascinantnim pogledom na okolinu.",
+        "specs": [
+          "38m²",
+          "King Size",
+          "Dostupno",
+          "Dostupno",
+          "Dostupno"
+        ]
+      },
+      {
+        "name": "Kamp Koncept®",
+        "desc": "Sa upečatljivom arhitekturom i vrhunskim sadržajima, Kamp Koncept® nudi ekskluzivno utočište.",
+        "specs": [
+          "28m²",
+          "Double",
+          "Dostupno",
+          "Dostupno",
+          "Nema"
+        ]
+      },
+      {
+        "name": "Wellness®",
+        "desc": "Wellness® uklapa se u šumsko okruženje sa staklenim zidovima od poda do plafona i toplim drvenim enterijerom, na korak od stabala.",
+        "specs": [
+          "52m²",
+          "King Size",
+          "Dostupno",
+          "Dostupno",
+          "Dostupno"
+        ]
+      }
+    ]
+  },
+  "moduli": {
+    "tagline": "Arhitektura budućnosti - prilagođena vama",
+    "heading": "Izaberite modul",
+    "subtitle": "Počnite sa baznim modelom",
+    "cta": "Konfiguriši ovaj modul",
+    "featuresLine": "Svi moduli · Energetski efikasni · ISO sertifikovani · Montaža 48h",
+    "scroll": "Skrolujte",
+    "points": [
+      {
+        "title": "Brza montaža",
+        "desc": "Sklapanje na lokaciji za samo nekoliko dana."
+      },
+      {
+        "title": "Prilagodljiv dizajn",
+        "desc": "Konfigurišite raspored, oblogu i detalje."
+      },
+      {
+        "title": "Dugoročna vrednost",
+        "desc": "Trajni materijali i niski troškovi održavanja."
+      }
+    ],
+    "specs": {
+      "width": "Širina",
+      "length": "Dužina",
+      "height": "Visina",
+      "floors": "Sprat"
+    },
+    "descriptions": {
+      "large-modul": "Prostran modul za porodičan život, sa visokim plafonima i punim dnevnim osvetljenjem. Idealan kao stalni dom u prirodi.",
+      "small-modul": "Kompaktan i efikasan prostor, savršen kao vikendica ili radni studio okružen zelenilom.",
+      "small-modul-v2": "Optimizovana verzija malog modula, sa pametnijim rasporedom i pristupačnijom cenom."
+    }
+  },
+  "features": {
+    "heading": "Sve Modular Houses® kuće-grade se po istim pravilima:",
+    "pillars": [
+      "Održivo",
+      "Briga o prirodi",
+      "Pametna privatnost",
+      "Prostrano",
+      "Zastakljeno"
+    ]
+  },
+  "details": {
+    "items": [
+      {
+        "title": [
+          "Zelena tišina",
+          "modul koji nestaje u šumi"
+        ],
+        "badge": "Šuma",
+        "desc": [
+          "Dom koji se stapa sa krošnjama,",
+          "tih i gotovo nevidljiv među drvećem."
+        ]
+      },
+      {
+        "title": [
+          "Priroda kao enterijer",
+          "kada granica nestaje"
+        ],
+        "badge": "Priroda",
+        "desc": [
+          "Staklo od poda do plafona briše granicu",
+          "između spoljašnjeg i unutrašnjeg sveta."
+        ]
+      },
+      {
+        "title": [
+          "Minimalizam u srcu prirode",
+          "manje je više"
+        ],
+        "badge": "Minimalizam",
+        "desc": [
+          "Sve što vam treba, ništa suvišno -",
+          "prostor sveden na svoju suštinu."
+        ]
+      }
+    ]
+  },
+  "reviews": {
+    "label": "Šta kažu naši gosti?",
+    "prevAria": "Prethodni utisak",
+    "nextAria": "Sledeći utisak",
+    "items": [
+      {
+        "quote": "Boravak u Modular Houses kućama redefinisao je moj odmor - savremeni dizajn susreće prirodu, a svaki zalazak sunca deluje kao mirno remek-delo.",
+        "name": "Marko Simić",
+        "location": "(Beograd)"
+      },
+      {
+        "quote": "Modular Houses pružio je savršen beg - elegantni, moderni prostori okruženi tišinom prirode. Svaki trenutak bio je smiren i jedinstven.",
+        "name": "Lena Marković",
+        "location": "(Novi Sad)"
+      },
+      {
+        "quote": "Modular Houses bio je savršeno skrovište - stilizovan, miran i potpuno okružen prelepim pogledima danju i noću.",
+        "name": "Jovan Vitomir",
+        "location": "(Niš)"
+      }
+    ]
+  },
+  "reserveSection": {
+    "wordmark": "Modular Houses",
+    "heading": [
+      "Bliže prirodi-",
+      "Bliže sebi"
+    ],
+    "subheading": [
+      "Provedite nezaboravno i izuzetno vreme",
+      "u prirodi sa - Modular Houses."
+    ],
+    "cta": "Rezerviši odmah",
+    "imageAlt": "Modularna kuća u prirodi"
+  },
+  "about": {
+    "label": "O nama",
+    "headline": "Dva čoveka. Jedna vizija. Modular Houses.",
+    "founders": [
+      {
+        "name": "Milan Vlajić",
+        "role": "m.ing.arh. · CEO & Osnivač",
+        "email": "milan@modularhouses.rs",
+        "quote": "Kao osnivač firme Modular Houses, svoju karijeru posvetio sam razvoju i unapređenju modularne gradnje. Idejni sam tvorac projekta Modular Houses, sa vizijom da ponudimo kvalitetna, moderna i funkcionalna stambena rešenja koja odgovaraju potrebama savremenog načina života. Kroz posvećenost inovacijama, kvalitetu izrade i zadovoljstvu klijenata, moj cilj je da modularna gradnja postane prepoznata kao pouzdan, efikasan i dugoročno održiv način stanovanja. Verujem da svaki uspešan projekat počinje dobrom idejom, a završava se poverenjem koje gradimo sa našim klijentima."
+      },
+      {
+        "name": "Miloš Simić",
+        "role": "Head of Sales & Marketing",
+        "email": "milos@modularhouses.rs",
+        "quote": "Već godinama sam posvećen razvoju prodaje, marketinga i komunikacije sa klijentima u oblasti modularne gradnje. Kao Head of Sales & Marketing u kompaniji Modular Houses, moj fokus je na povezivanju inovativnih stambenih rešenja sa ljudima koji traže kvalitetan, funkcionalan i moderan prostor za život. Verujem da je poverenje temelj svakog uspešnog projekta, zbog čega se trudim da svakom klijentu pružim jasne informacije, stručnu podršku i sigurnost tokom celog procesa - od prve ideje do useljenja."
+      }
+    ],
+    "manifesto": "Modular Houses nije samo firma - to je način razmišljanja o prostoru, životu i budućnosti.",
+    "ctaModules": "Pogledaj module",
+    "ctaWrite": "Pišite nam",
+    "valuesLabel": "(Vrednosti)",
+    "values": [
+      {
+        "title": "Kvalitet",
+        "desc": "Svaki detalj je bitan."
+      },
+      {
+        "title": "Transparentnost",
+        "desc": "Jasna komunikacija od ideje do useljenja."
+      },
+      {
+        "title": "Inovacija",
+        "desc": "Modularna gradnja kao odgovor na budućnost."
+      }
+    ],
+    "processLabel": "(Proces)",
+    "process": [
+      {
+        "tag": "Početak",
+        "title": "Konsultacija",
+        "desc": "Razgovor o vašim potrebama, željama i budžetu - temelj svakog dobrog projekta."
+      },
+      {
+        "tag": "Razvoj",
+        "title": "Projektovanje",
+        "desc": "Idejno rešenje i tehnička dokumentacija prilagođeni vašem prostoru i načinu života."
+      },
+      {
+        "tag": "Izrada",
+        "title": "Proizvodnja",
+        "desc": "Izrada modula u kontrolisanim fabričkim uslovima, sa preciznošću i kontrolom kvaliteta."
+      },
+      {
+        "tag": "Isporuka",
+        "title": "Transport",
+        "desc": "Dopremanje gotovih modula na vašu lokaciju, bezbedno i tačno na vreme."
+      },
+      {
+        "tag": "Kraj",
+        "title": "Montaža",
+        "desc": "Sklapanje na licu mesta i predaja ključeva za samo nekoliko dana."
+      }
+    ],
+    "contact": {
+      "headline": "Imate projekat na umu?",
+      "subtitle": "Razgovarajmo o vašem sledećem domu."
+    }
+  },
+  "kontakt": {
+    "label": "Kontakt",
+    "headline": "Započnimo razgovor.",
+    "infoLabel": "(Kontakt)",
+    "emailLabel": "Email",
+    "email": "info@modularhouses.rs",
+    "phoneLabel": "Telefon",
+    "phone": "+381 65 444 4545",
+    "instagramLabel": "Instagram",
+    "instagram": "@modularhouses_rs",
+    "instagramHref": "https://www.instagram.com/modularhouses_rs/",
+    "locationLabel": "Lokacija",
+    "location": "Svilajnac, Srbija",
+    "form": {
+      "name": "Ime i prezime",
+      "email": "Email",
+      "phone": "Telefon (opciono)",
+      "message": "Poruka",
+      "submit": "Pošalji poruku",
+      "submitting": "Slanje...",
+      "successTitle": "Poruka je uspešno poslata!",
+      "successText": "Odgovorićemo vam u najkraćem mogućem roku.",
+      "error": "Došlo je do greške. Pokušajte ponovo ili nas kontaktirajte direktno na info@modularhouses.rs"
+    }
+  },
+  "configurator": {
+    "back": "Nazad",
+    "cta": "Kontaktirajte nas →",
+    "active": "aktivno",
+    "baseLabel": "Konstrukcija (osnova)",
+    "noOptions": "Učitavanje opcija..."
+  },
+  "menu": {
+    "button": "Meni",
+    "openAria": "Otvori meni",
+    "closeAria": "Zatvori meni",
+    "links": [
+      "Početna",
+      "O nama",
+      "Modul",
+      "Kontakt"
+    ],
+    "email": "info@modularhouses.rs"
+  },
+  "footer": {
+    "getInTouch": "Stupite u kontakt",
+    "email": "info@modularhouses.rs",
+    "reserve": "Rezervišite svoju kuću® ↗",
+    "wordmark": "Modular",
+    "copyright": "© {year} Modular Houses® - Sva prava zadržana",
+    "tagline": "Bliže prirodi-Bliže sebi"
+  },
+  "language": {
+    "label": "Promeni jezik"
+  }
+}
