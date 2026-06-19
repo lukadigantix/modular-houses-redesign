@@ -35,6 +35,18 @@ export default function Configurator({ model }) {
     Object.fromEntries(groups.map((g) => [g.id, g.options[0].node]))
   );
 
+  // Desktop (>=1024px) = side-by-side with an internally-scrolling panel.
+  // Below that the layout is stacked and the whole PAGE scrolls, so we must NOT
+  // set data-lenis-prevent on the panel (it would swallow touch scroll there).
+  const [isDesktop, setIsDesktop] = useState(false);
+  useEffect(() => {
+    const mq = window.matchMedia("(min-width: 1024px)");
+    const update = () => setIsDesktop(mq.matches);
+    update();
+    mq.addEventListener("change", update);
+    return () => mq.removeEventListener("change", update);
+  }, []);
+
   // Visibility map fed to the GLB: base nodes always on, plus the selected
   // option of every group on and its siblings off.
   const nodeVisibility = useMemo(() => {
@@ -67,9 +79,9 @@ export default function Configurator({ model }) {
   const pick = (l) => (typeof l === "string" ? l : l[locale] ?? l.sr);
 
   return (
-    <div className="relative flex h-[100svh] w-full flex-col bg-ink text-cream md:flex-row">
+    <div className="relative flex w-full flex-col bg-ink text-cream lg:h-[100svh] lg:flex-row">
       {/* ===== LEFT: 3D viewer (full controls) ===== */}
-      <div className="relative h-[55vh] w-full md:h-full md:w-[65%]">
+      <div className="relative h-[50vh] w-full lg:h-full lg:w-[65%]">
         <Link
           href="/"
           onClick={() => showLoader()}
@@ -90,10 +102,12 @@ export default function Configurator({ model }) {
         />
       </div>
 
-      {/* ===== RIGHT: configurator panel (dark, premium) ===== */}
+      {/* ===== RIGHT: configurator panel (dark, premium) =====
+          <1024px: stacked, full width, flows with the page (no fixed height /
+          internal scroll). >=1024px: side panel, 35% wide, scrolls internally. */}
       <aside
-        data-lenis-prevent
-        className="flex h-[45vh] w-full flex-col overflow-y-auto border-l border-sand/20 bg-brown-deep px-6 py-10 text-cream md:h-full md:w-[35%] md:px-10 md:py-14"
+        {...(isDesktop ? { "data-lenis-prevent": "" } : {})}
+        className="flex w-full flex-col bg-brown-deep px-6 py-10 text-cream lg:h-full lg:w-[35%] lg:overflow-y-auto lg:border-l lg:border-sand/20 lg:px-10 lg:py-14"
       >
         {/* title + active counter directly beneath it (left-aligned) */}
         <h1 className="text-3xl leading-[1.05] tracking-[-0.02em] md:text-[2.5vw]">
@@ -152,8 +166,9 @@ export default function Configurator({ model }) {
           </div>
         )}
 
-        {/* separator + CTA, pinned to the bottom with breathing room */}
-        <div className="mt-auto border-t border-sand/15 pt-8">
+        {/* separator + CTA. On mobile a fixed gap above the line keeps it off
+            the last pill; on desktop mt-auto pins it to the panel bottom. */}
+        <div className="mt-10 border-t border-sand/15 pt-8 lg:mt-auto">
           <Link
             href="/kontakt"
             onClick={() => showLoader()}
