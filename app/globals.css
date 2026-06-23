@@ -77,33 +77,3 @@ html.lenis body {
   background: var(--ink);
   color: var(--cream);
 }
-
-/* Accessibility: honour the OS "reduce motion" setting. Kills smooth-scroll
-   easing and any CSS transitions/animations so users who opt out get a static,
-   instant experience. GSAP scroll animations are gated separately via
-   gsap.matchMedia("(prefers-reduced-motion: no-preference)") in components. */
-@media (prefers-reduced-motion: reduce) {
-  html.lenis,
-  html.lenis body {
-    scroll-behavior: auto;
-  }
-
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.001ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.001ms !important;
-    scroll-behavior: auto !important;
-  }
-}
-
-/* Hide scrollbar on mobile swipe carousels (native scroll-snap tracks) while
-   keeping them scrollable. */
-.no-scrollbar {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-.no-scrollbar::-webkit-scrollbar {
-  display: none;
-}
