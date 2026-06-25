@@ -11,12 +11,17 @@ export const alt =
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
-// Photo background (the 1200×630 hero crop) embedded as a data URI so the
-// generator never depends on a running server / network at build time.
-const bg = readFileSync(join(process.cwd(), "public", "og-image.jpg"));
-const bgUri = `data:image/jpeg;base64,${bg.toString("base64")}`;
-
 export default function OpengraphImage() {
+  // Photo background (the 1200×630 hero crop) embedded as a data URI. Read
+  // INSIDE the component, not at module scope: every page imports this module
+  // to read the metadata exports above (alt/size/contentType), so a top-level
+  // readFileSync would run in every page's serverless function — where Vercel
+  // does NOT ship public/ assets — and throw ENOENT, 500-ing every page. Here
+  // it only runs when the image is actually generated (build time), where the
+  // file exists.
+  const bg = readFileSync(join(process.cwd(), "public", "og-image.jpg"));
+  const bgUri = `data:image/jpeg;base64,${bg.toString("base64")}`;
+
   return new ImageResponse(
     (
       <div
