@@ -326,5 +326,11 @@
   },
   "language": {
     "label": "Change language"
+  },
+  "notFound": {
+    "label": "Error 404",
+    "title": "Page not found",
+    "copy": "This page doesn't exist or may have been moved. Head back home and keep exploring our custom modular and prefab houses.",
+    "cta": "Back to home"
   }
 }

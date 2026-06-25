@@ -326,5 +326,11 @@
   },
   "language": {
     "label": "Promeni jezik"
+  },
+  "notFound": {
+    "label": "Greška 404",
+    "title": "Stranica nije pronađena",
+    "copy": "Izgleda da ova stranica ne postoji ili je premeštena. Vratite se na početnu i nastavite da istražujete modularne i montažne kuće po meri.",
+    "cta": "Nazad na početnu"
   }
 }
